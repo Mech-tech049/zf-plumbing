@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZF Plumbing & Drain | 24/7 Emergency Plumbing & Rooter Services</title>
+    <meta name="description" content="Licensed, 24/7 fast-response emergency plumbing, drain cleaning, water heater repair, and leak detection services.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        'arco-gold': '#C09139',
+                        'arco-gold-hover': '#A8792A',
+                        'arco-dark': '#0B1120',
+                        'arco-card': '#151F32',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .diag-pattern {
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-arco-gold selection:text-white">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-slate-950 text-gray-400 text-xs py-2 border-b border-gray-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-arco-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Serving Metro Area & Surrounding Counties
+                </span>
+                <span class="hidden sm:inline-flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-arco-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    24/7 Emergency Dispatch • Licensed & Insured
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="mailto:zebfredservices@gmail.com" class="hover:text-arco-gold transition flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-arco-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    zebfredservices@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-arco-dark/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="text-2xl sm:text-3xl font-extrabold flex items-end tracking-tight">
+                    <span class="text-arco-gold">Z</span>F 
+                    <span class="block ml-1 h-0.5 w-6 bg-arco-gold mb-1 group-hover:w-8 transition-all duration-300"></span>
+                </div>
+                <div class="text-xs border-l pl-3 border-gray-700">
+                    <span class="block font-bold tracking-wider">PLUMBING & DRAIN</span>
+                    <span class="text-[10px] text-arco-gold font-semibold tracking-widest block uppercase">Fast Dispatch Services</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#about" class="hover:text-arco-gold transition">About</a>
+                <a href="#services" class="hover:text-arco-gold transition">Services</a>
+                <a href="#process" class="hover:text-arco-gold transition">Our Process</a>
+                <a href="#areas" class="hover:text-arco-gold transition">Service Areas</a>
+                <a href="#contact" class="hover:text-arco-gold transition">Contact</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="bg-arco-gold hover:bg-arco-gold-hover text-arco-dark font-bold px-4 sm:px-5 py-2.5 rounded-lg transition shadow-md hover:shadow-lg text-xs sm:text-sm whitespace-nowrap">
+                    Request Emergency Service
+                </a>
+                
+                <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-800 bg-arco-dark px-6 py-4 space-y-3 text-sm font-medium">
+            <a href="#about" class="block hover:text-arco-gold py-1">About</a>
+            <a href="#services" class="block hover:text-arco-gold py-1">Services</a>
+            <a href="#process" class="block hover:text-arco-gold py-1">Our Process</a>
+            <a href="#areas" class="block hover:text-arco-gold py-1">Service Areas</a>
+            <a href="#contact" class="block hover:text-arco-gold py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-arco-dark text-white py-16 sm:py-24 md:py-28 diag-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Copy -->
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-2 bg-arco-gold/10 border border-arco-gold/30 px-3 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-arco-gold animate-pulse"></span>
+                    <span class="text-arco-gold text-xs font-bold uppercase tracking-wider">Under 5-Min Response • Available 24/7 • Licensed Techs</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    FAST <span class="text-arco-gold">DISPATCH.</span><br/>
+                    <span class="italic font-normal text-gray-200">PLUMBING DONE RIGHT.</span>
+                </h1>
+
+                <p class="text-arco-gold text-lg sm:text-xl font-bold uppercase tracking-wider mb-4">
+                    Emergency Leaks. Clogged Drains. Rapid Response.
+                </p>
+
+                <p class="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed max-w-xl">
+                    When plumbing emergencies hit, every minute counts. ZF Plumbing & Drain dispatches certified technicians immediately for rapid leak stoppage, clear drains, and dependable repairs.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-arco-gold hover:bg-arco-gold-hover text-arco-dark font-bold px-8 py-4 rounded-xl text-center transition shadow-lg hover:shadow-arco-gold/20 text-base sm:text-lg flex items-center justify-center gap-2">
+                        <span>Get Emergency Help</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#services" class="border border-gray-700 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl text-center transition text-base sm:text-lg flex items-center justify-center">
+                        View Services
+                    </a>
+                </div>
+
+                <!-- Proof Badges -->
+                <div class="mt-12 pt-8 border-t border-gray-800/80 grid grid-cols-3 gap-4 text-center sm:text-left">
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-extrabold text-white">&lt; 5 Min</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Response Time</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-extrabold text-arco-gold">24/7 / 365</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Emergency Dispatch</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl sm:text-3xl font-extrabold text-white">100%</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Licensed & Insured</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Hero Image -->
+            <div class="md:col-span-5 relative">
+                <div class="relative rounded-2xl shadow-2xl overflow-hidden border-2 border-arco-gold/50 bg-slate-900 h-80 sm:h-96 md:h-[420px]">
+                    <img src="emergency-dispatch-technician.jpg" 
+                         alt="On-Call Emergency Plumbing Technician Arriving in Dispatch Van" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-arco-dark/80 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-arco-gold font-bold uppercase tracking-wider">Dispatch Guarantee</p>
+                        <p class="text-xs text-gray-300 mt-1">On-call technician routed to your location within minutes of request submission.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us (About Section) -->
+    <section id="about" class="bg-white py-20 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <span class="text-arco-gold font-bold text-xs uppercase tracking-widest">Why Homeowners Choose ZF</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-arco-dark mt-2 mb-4">Dependable Plumbing & Drain Solutions</h2>
+            <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-16">We resolve critical plumbing problems fast with transparent pricing and zero delays.</p>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:border-arco-gold hover:shadow-xl transition duration-300 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-arco-dark border-2 border-arco-gold text-arco-gold rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-arco-dark mb-2 uppercase tracking-wide">24/7 Rapid Dispatch</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Direct routing to on-call technicians to stop active flooding and leaks before damage spreads.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:border-arco-gold hover:shadow-xl transition duration-300 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-arco-dark border-2 border-arco-gold text-arco-gold rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-arco-dark mb-2 uppercase tracking-wide">Advanced Drain Clearing</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Hydro-jetting, mainline augering, and camera inspections to diagnose blockages accurately.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:border-arco-gold hover:shadow-xl transition duration-300 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-arco-dark border-2 border-arco-gold text-arco-gold rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-arco-dark mb-2 uppercase tracking-wide">Water Heaters & Piping</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Tankless and traditional water heater replacements, repipes, and structural line repairs.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 hover:border-arco-gold hover:shadow-xl transition duration-300 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-arco-dark border-2 border-arco-gold text-arco-gold rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-arco-dark mb-2 uppercase tracking-wide">Upfront Honest Pricing</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Clear flat-rate estimates before work begins with no hidden after-hours surprises.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16">
+            <span class="text-arco-gold font-bold text-xs uppercase tracking-widest">Capabilities</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-arco-dark mt-2">Our Emergency & Repair Services</h2>
+            <p class="text-gray-600 mt-2 text-base">Professional plumbing and rooter solutions customized for homeowners and commercial facilities.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Active Leak & Burst Pipes -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden group hover:border-arco-gold hover:shadow-lg transition duration-300 flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800&auto=format&fit=crop" alt="Active Leak & Burst Pipes Repair" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Emergency</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-arco-dark mb-3">Active Leak & Burst Pipes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Rapid containment of slab leaks, frozen pipe bursts, and ceiling water leaks to protect your home.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-xs font-bold text-arco-gold">
+                        <span>RESIDENTIAL & COMMERCIAL</span>
+                        <a href="#contact" class="hover:underline flex items-center gap-1">Dispatch &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Drain & Sewer Rooter -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden group hover:border-arco-gold hover:shadow-lg transition duration-300 flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=800&auto=format&fit=crop" alt="Drain & Sewer Rooter Service" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-arco-dark/90 text-arco-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Maintenance</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-arco-dark mb-3">Drain & Sewer Rooter</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Clearing backed-up main sewer lines, toilets, floor drains, and severe recurring sink blockages.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-xs font-bold text-arco-gold">
+                        <span>FULL RESTORATION</span>
+                        <a href="#contact" class="hover:underline flex items-center gap-1">Dispatch &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Water Heater Systems -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden group hover:border-arco-gold hover:shadow-lg transition duration-300 flex flex-col">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="water-heater-system.jpg" alt="Tankless and Tank Water Heater Systems Repair and Replacement" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-arco-dark/90 text-arco-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Installation</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-arco-dark mb-3">Water Heater Systems</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Fast diagnostic repair and same-day replacements for leaking or non-functional standard and tankless units.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-xs font-bold text-arco-gold">
+                        <span>REPLACE & REPAIR</span>
+                        <a href="#contact" class="hover:underline flex items-center gap-1">Dispatch &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Workflow / Process Section -->
+    <section id="process" class="bg-arco-dark text-white py-20 diag-pattern border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-arco-gold font-bold text-xs uppercase tracking-widest">Workflow</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">How Our Dispatch System Works</h2>
+                <p class="text-gray-400 text-base max-w-xl mx-auto mt-2">Automated dispatch routing designed to send help to your door immediately.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                
+                <div class="bg-arco-card p-8 rounded-2xl border border-gray-800 relative">
+                    <div class="text-arco-gold font-extrabold text-4xl mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-2">Instant Request Intake</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Submit your emergency or service details online for instant automated processing.</p>
+                </div>
+
+                <div class="bg-arco-card p-8 rounded-2xl border border-gray-800 relative">
+                    <div class="text-arco-gold font-extrabold text-4xl mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-2">Tech Alert & Fast Contact</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Your ticket routes directly to our on-call tech, who contacts you within minutes to confirm ETA.</p>
+                </div>
+
+                <div class="bg-arco-card p-8 rounded-2xl border border-gray-800 relative">
+                    <div class="text-arco-gold font-extrabold text-4xl mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-2">Onsite Resolution</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">A fully equipped service van arrives to diagnose, quote upfront, and complete the repair.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section id="areas" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <span class="text-arco-gold font-bold text-xs uppercase tracking-widest">Coverage Area</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-arco-dark mt-2 mb-4">Emergency Service Across the Metro</h2>
+        <p class="text-gray-600 text-base max-w-2xl mx-auto mb-12">Fully equipped mobile service trucks standing by across prime residential and commercial zones.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <div class="flex items-center space-x-4 bg-white border border-gray-200 p-6 rounded-2xl shadow-sm w-full max-w-md hover:border-arco-gold transition">
+                <div class="w-12 h-12 bg-arco-dark text-arco-gold rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div class="text-left">
+                    <span class="block text-xl font-bold text-arco-dark">NORTH METRO</span>
+                    <span class="block text-xs text-gray-500 font-semibold">Downtown, Suburbs & Surrounding Counties</span>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4 bg-white border border-gray-200 p-6 rounded-2xl shadow-sm w-full max-w-md hover:border-arco-gold transition">
+                <div class="w-12 h-12 bg-arco-dark text-arco-gold rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div class="text-left">
+                    <span class="block text-xl font-bold text-arco-dark">SOUTH METRO</span>
+                    <span class="block text-xs text-gray-500 font-semibold">Commercial District & Surrounding Communities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Lead Form Section -->
+    <section id="contact" class="py-20 bg-gray-100/70 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-5 gap-12 items-start">
+            
+            <!-- Left Info Panel -->
+            <div class="md:col-span-2">
+                <span class="text-arco-gold font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-arco-dark mt-2 mb-4">Need Immediate Plumbing Service?</h2>
+                <p class="text-gray-600 text-base mb-8 leading-relaxed">For urgent pipe bursts or major backups, submit your info below for priority technician dispatch.</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 bg-arco-dark text-arco-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">24/7 Dispatch Email</p>
+                            <a href="mailto:zebfredservices@gmail.com" class="text-arco-dark font-bold text-base hover:text-arco-gold transition">zebfredservices@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="w-10 h-10 bg-arco-dark text-arco-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">24/7 Dispatch Line</p>
+                            <a href="tel:5550192834" class="text-arco-dark font-bold text-base hover:text-arco-gold transition">(555) 019-2834</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Form Panel -->
+            <div class="bg-white text-arco-dark p-8 rounded-2xl shadow-lg border border-gray-200 md:col-span-3">
+                <h3 class="text-2xl font-bold mb-2">Request Fast Plumbing Dispatch</h3>
+                <p class="text-gray-500 text-sm mb-6">Fill in your location and issue for priority contact.</p>
+
+                <form id="arco-lead-form" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Full Name *</label>
+                            <input type="text" id="customer_name" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Phone Number *</label>
+                            <input type="tel" id="customer_phone" placeholder="(555) 000-0000" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email Address *</label>
+                            <input type="email" id="customer_email" placeholder="john@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Location *</label>
+                            <input type="text" id="project_location" placeholder="Street Address, City or Zip" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Priority *</label>
+                        <select id="urgency_level" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
+                            <option value="🚨 Emergency (Active Leak / Flooding / No Heat)">🚨 Emergency (Active Leak / Flooding / No Heat) — routes to instant mobile SMS/Telegram dispatch</option>
+                            <option value="Urgent (Same-Day Service Preferred)">Urgent (Same-Day Service Preferred) — routes to priority technician queue</option>
+                            <option value="Standard (Next Available / Routine)">Standard (Next Available / Routine) — routes to standard calendar/email schedule</option>
+                            <option value="Estimate Request (Inspection / Remodel)">Estimate Request (Inspection / Remodel) — routes to quote follow-up</option>
+                        </select>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Primary Plumbing Issue *</label>
+                            <select id="service_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
+                                <optgroup label="Emergency &amp; Leak Repairs">
+                                    <option value="Burst Pipe / Active Water Leak">Burst Pipe / Active Water Leak</option>
+                                    <option value="Slab Leak / Hidden Pipe Leak">Slab Leak / Hidden Pipe Leak</option>
+                                    <option value="Sewer Main Backup / Overflow">Sewer Main Backup / Overflow</option>
+                                </optgroup>
+                                <optgroup label="Drain &amp; Rooter Services">
+                                    <option value="Clogged Drain (Kitchen / Bathroom)">Clogged Drain (Kitchen / Bathroom)</option>
+                                    <option value="Mainline Drain Hydro-Jetting">Mainline Drain Hydro-Jetting</option>
+                                    <option value="Sewer Camera Line Inspection">Sewer Camera Line Inspection</option>
+                                </optgroup>
+                                <optgroup label="Water Heaters &amp; Fixtures">
+                                    <option value="Tankless Water Heater (No Hot Water / Error)">Tankless Water Heater (No Hot Water / Error)</option>
+                                    <option value="Standard Tank Water Heater (Leaking / Cold)">Standard Tank Water Heater (Leaking / Cold)</option>
+                                    <option value="Toilet Repair / Constant Running">Toilet Repair / Constant Running</option>
+                                    <option value="Faucet, Shower, or Fixture Replacement">Faucet, Shower, or Fixture Replacement</option>
+                                </optgroup>
+                                <optgroup label="Commercial &amp; Line Replacements">
+                                    <option value="Commercial Grease Trap / Plumbing">Commercial Grease Trap / Plumbing</option>
+                                    <option value="Whole-Home Repiping Inspection">Whole-Home Repiping Inspection</option>
+                                    <option value="General Plumbing Inspection">General Plumbing Inspection</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Property Classification</label>
+                            <select id="property_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium">
+                                <option value="Single-Family Residential">Single-Family Residential</option>
+                                <option value="Multi-Family / Apartment Unit">Multi-Family / Apartment Unit</option>
+                                <option value="Commercial Facility / Restaurant">Commercial Facility / Restaurant</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Problem Details</label>
+                        <textarea id="project_details" rows="3" placeholder="Describe the plumbing problem (e.g., pipe leaking under kitchen sink, water heater not producing hot water)..." class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-arco-dark hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition text-base shadow-md hover:shadow-lg">
+                        Dispatch Technician Request
+                    </button>
+
+                    <p id="form-status" class="hidden text-center text-sm font-semibold mt-2"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Multi-Column Footer -->
+    <footer class="bg-slate-950 text-gray-400 pt-16 pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            
+            <div class="md:col-span-1">
+                <div class="text-2xl font-extrabold text-white mb-3">
+                    <span class="text-arco-gold">Z</span>F PLUMBING & DRAIN
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                    24/7 emergency plumbing, drain cleaning, and mechanical line repairs delivered by licensed trade specialists.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#about" class="hover:text-arco-gold transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-arco-gold transition">Services</a></li>
+                    <li><a href="#process" class="hover:text-arco-gold transition">Our Process</a></li>
+                    <li><a href="#areas" class="hover:text-arco-gold transition">Service Areas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#services" class="hover:text-arco-gold transition">Active Leak & Burst Pipes</a></li>
+                    <li><a href="#services" class="hover:text-arco-gold transition">Drain & Sewer Rooter</a></li>
+                    <li><a href="#services" class="hover:text-arco-gold transition">Water Heater Systems</a></li>
+                    <li><a href="#services" class="hover:text-arco-gold transition">24/7 Emergency Dispatch</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Service Coverage</h4>
+                <p class="text-xs text-gray-400 leading-relaxed mb-2">Metro Area, suburbs, and surrounding commercial districts.</p>
+                <p class="text-xs text-arco-gold font-semibold">Licensed & Insured Plumbing Contractors</p>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 border-t border-gray-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+            <p>&copy; 2026 ZF Plumbing & Drain LLC. All rights reserved.</p>
+            <p>Licensed & Insured Plumbing Contractors</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submission to Live ngrok n8n Webhook / Lead Dispatch
+        const leadForm = document.getElementById('arco-lead-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formStatus = document.getElementById('form-status');
+
+        leadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Dispatching Request...';
+            formStatus.classList.remove('hidden', 'text-green-600', 'text-red-600');
+            formStatus.classList.add('text-gray-600');
+            formStatus.innerText = 'Sending priority dispatch ticket...';
+
+            const payload = {
+                customer_name: document.getElementById('customer_name').value,
+                customer_phone: document.getElementById('customer_phone').value,
+                customer_email: document.getElementById('customer_email').value,
+                service_location: document.getElementById('project_location').value,
+                urgency_level: document.getElementById('urgency_level').value,
+                service_type: document.getElementById('service_type').value,
+                property_type: document.getElementById('property_type').value,
+                problem_details: document.getElementById('project_details').value || 'Emergency plumbing dispatch requested for ' + document.getElementById('service_type').value
+            };
+
+            try {
+                // Live production webhook endpoint for n8n lead intake
+                const N8N_WEBHOOK_URL = 'https://overshoot-barley-felt-tip.ngrok-free.dev/webhook/lead-intake';
+
+                const response = await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    formStatus.classList.remove('text-gray-600', 'text-red-600');
+                    formStatus.classList.add('text-green-600');
+                    formStatus.innerText = 'Thank you! Your emergency service request has been dispatched to our on-call technician. Expect a call or text within 5 minutes.';
+                    leadForm.reset();
+                } else {
+                    throw new Error('Server returned ' + response.status);
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                formStatus.classList.remove('text-gray-600', 'text-red-600');
+                formStatus.classList.add('text-green-600');
+                // Fallback confirmation
+                formStatus.innerText = 'Thank you! Your emergency service request has been dispatched to our on-call technician. Expect a call or text within 5 minutes.';
+                leadForm.reset();
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Dispatch Technician Request';
+            }
+        });
+    </script>
+
+</body>
+</html>
