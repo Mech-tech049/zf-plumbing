@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback & Rating | ZF Plumbing & Drain</title>
+    <meta name="description" content="Rate your service experience with ZF Plumbing & Drain. We value your feedback.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        'arco-gold': '#C09139',
+                        'arco-gold-hover': '#A8792A',
+                        'arco-dark': '#0B1120',
+                        'arco-card': '#151F32',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .diag-pattern {
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+            background-size: 24px 24px;
+        }
+        .star-active {
+            color: #C09139;
+        }
+        .star-inactive {
+            color: #4B5563;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-arco-gold selection:text-white min-h-screen flex flex-col">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-slate-950 text-gray-400 text-xs py-2 border-b border-gray-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-arco-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    24/7 Quality Assurance & Dispatch Services
+                </span>
+            </div>
+            <div>
+                <a href="mailto:zebfredservices@gmail.com" class="hover:text-arco-gold transition flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-arco-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    zebfredservices@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-arco-dark/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center gap-4">
+            <a href="/" class="flex items-center space-x-3 group">
+                <div class="text-2xl sm:text-3xl font-extrabold flex items-end tracking-tight">
+                    <span class="text-arco-gold">Z</span>F 
+                    <span class="block ml-1 h-0.5 w-6 bg-arco-gold mb-1 group-hover:w-8 transition-all duration-300"></span>
+                </div>
+                <div class="text-xs border-l pl-3 border-gray-700">
+                    <span class="block font-bold tracking-wider">PLUMBING & DRAIN</span>
+                    <span class="text-[10px] text-arco-gold font-semibold tracking-widest block uppercase">Customer Care & Reviews</span>
+                </div>
+            </a>
+            <a href="/" class="text-sm font-semibold text-gray-300 hover:text-arco-gold transition flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6">
+        <div class="w-full max-w-lg">
+            
+            <!-- Feedback Card -->
+            <div id="feedbackCard" class="bg-white rounded-2xl shadow-xl border border-gray-200/80 overflow-hidden transition-all duration-300">
+                <!-- Card Header -->
+                <div class="bg-arco-dark text-white p-6 sm:p-8 border-b border-gray-800 diag-pattern">
+                    <div class="inline-flex items-center gap-2 bg-arco-gold/15 border border-arco-gold/30 px-3 py-1 rounded-full text-xs font-semibold text-arco-gold mb-3">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Service Quality Feedback
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Rate Your Service</h1>
+                    <p class="text-gray-300 text-sm mt-1">Your review helps us keep our plumbing & drain standards high.</p>
+                    <div class="mt-4 flex items-center gap-2 bg-slate-900/80 border border-gray-700/60 px-3.5 py-1.5 rounded-lg w-fit">
+                        <span class="text-xs text-gray-400 font-medium">Ticket ID:</span>
+                        <span id="ticketDisplay" class="text-xs font-bold text-arco-gold tracking-wider uppercase font-mono">ZF-DEMO</span>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <form id="feedbackForm" class="p-6 sm:p-8 space-y-6">
+                    
+                    <!-- Rating Star Picker -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-900 mb-2">Overall Service Rating <span class="text-red-500">*</span></label>
+                        
+                        <!-- Interactive Stars -->
+                        <div class="flex items-center gap-2 mb-3" id="starContainer">
+                            <button type="button" class="star-btn p-1 transition transform hover:scale-110 focus:outline-none" data-value="1">
+                                <svg class="w-8 h-8 star-inactive fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </button>
+                            <button type="button" class="star-btn p-1 transition transform hover:scale-110 focus:outline-none" data-value="2">
+                                <svg class="w-8 h-8 star-inactive fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </button>
+                            <button type="button" class="star-btn p-1 transition transform hover:scale-110 focus:outline-none" data-value="3">
+                                <svg class="w-8 h-8 star-inactive fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </button>
+                            <button type="button" class="star-btn p-1 transition transform hover:scale-110 focus:outline-none" data-value="4">
+                                <svg class="w-8 h-8 star-inactive fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </button>
+                            <button type="button" class="star-btn p-1 transition transform hover:scale-110 focus:outline-none" data-value="5">
+                                <svg class="w-8 h-8 star-inactive fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </button>
+                            <span id="ratingLabel" class="ml-2 text-sm font-semibold text-gray-700">5 - Excellent</span>
+                        </div>
+
+                        <!-- Dropdown fallback for accessibility / selection -->
+                        <select id="ratingSelect" class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-arco-gold focus:border-arco-gold focus:bg-white transition">
+                            <option value="5">⭐⭐⭐⭐⭐ (5 - Excellent)</option>
+                            <option value="4">⭐⭐⭐⭐ (4 - Good)</option>
+                            <option value="3">⭐⭐⭐ (3 - Average)</option>
+                            <option value="2">⭐⭐ (2 - Poor)</option>
+                            <option value="1">⭐ (1 - Terrible)</option>
+                        </select>
+                    </div>
+
+                    <!-- Comments / Feedback Area -->
+                    <div>
+                        <label for="comments" class="block text-sm font-bold text-gray-900 mb-2">Comments / Issues</label>
+                        <textarea id="comments" rows="4" placeholder="Tell us how the technician did or if anything needs further attention..." class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-arco-gold focus:border-arco-gold focus:bg-white transition resize-none"></textarea>
+                    </div>
+
+                    <!-- Alert message container -->
+                    <div id="alertBox" class="hidden text-sm rounded-lg p-3"></div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitBtn" class="w-full bg-arco-gold hover:bg-arco-gold-hover text-arco-dark font-extrabold text-sm sm:text-base py-3.5 px-6 rounded-lg shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                        <span id="btnText">Submit Feedback</span>
+                        <svg id="btnSpinner" class="hidden animate-spin h-5 w-5 text-arco-dark" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Thank You State (Hidden by default) -->
+                <div id="thankYouState" class="hidden p-8 sm:p-12 text-center space-y-4">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full mx-auto flex items-center justify-center shadow-inner">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Thank You!</h2>
+                    <p class="text-gray-600 text-sm max-w-sm mx-auto">Your feedback for ticket <span id="confirmedTicket" class="font-mono font-bold text-arco-dark">ZF-DEMO</span> has been logged and sent to our dispatch team.</p>
+                    <div class="pt-4">
+                        <a href="/" class="inline-flex items-center gap-2 bg-arco-dark hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-lg transition">
+                            Return to Homepage
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer note -->
+            <p class="text-center text-xs text-gray-400 mt-6">
+                ZF Plumbing & Drain Services • Licensed & Insured Dispatch
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const leadId = urlParams.get('lead_id') || 'ZF-DEMO';
+        const preRating = urlParams.get('rating') || '5';
+
+        // DOM Elements
+        const ticketDisplay = document.getElementById('ticketDisplay');
+        const confirmedTicket = document.getElementById('confirmedTicket');
+        const ratingSelect = document.getElementById('ratingSelect');
+        const ratingLabel = document.getElementById('ratingLabel');
+        const commentsInput = document.getElementById('comments');
+        const feedbackForm = document.getElementById('feedbackForm');
+        const feedbackCard = document.getElementById('feedbackCard');
+        const thankYouState = document.getElementById('thankYouState');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const alertBox = document.getElementById('alertBox');
+        const starBtns = document.querySelectorAll('.star-btn');
+
+        const ratingDescriptions = {
+            '5': '5 - Excellent',
+            '4': '4 - Good',
+            '3': '3 - Average',
+            '2': '2 - Poor',
+            '1': '1 - Terrible'
+        };
+
+        // Initialize values
+        ticketDisplay.textContent = leadId;
+        confirmedTicket.textContent = leadId;
+
+        function updateStars(val) {
+            const num = parseInt(val, 10);
+            starBtns.forEach(btn => {
+                const btnVal = parseInt(btn.getAttribute('data-value'), 10);
+                const svg = btn.querySelector('svg');
+                if (btnVal <= num) {
+                    svg.classList.remove('star-inactive');
+                    svg.classList.add('star-active');
+                } else {
+                    svg.classList.remove('star-active');
+                    svg.classList.add('star-inactive');
+                }
+            });
+            ratingLabel.textContent = ratingDescriptions[String(num)] || (num + ' Stars');
+            ratingSelect.value = String(num);
+        }
+
+        // Set initial rating from query param (clamped between 1 and 5)
+        const initialRatingNum = Math.min(5, Math.max(1, parseInt(preRating, 10) || 5));
+        updateStars(initialRatingNum);
+
+        // Star click listeners
+        starBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const val = btn.getAttribute('data-value');
+                updateStars(val);
+            });
+        });
+
+        // Dropdown change listener
+        ratingSelect.addEventListener('change', (e) => {
+            updateStars(e.target.value);
+        });
+
+        // Form submission
+        feedbackForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Set loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Submitting...';
+            btnSpinner.classList.remove('hidden');
+            alertBox.classList.add('hidden');
+
+            const currentRating = parseInt(ratingSelect.value, 10);
+            const commentsText = commentsInput.value.trim();
+
+            const payload = {
+                lead_id: leadId,
+                rating: currentRating,
+                comments: commentsText
+            };
+
+            try {
+                const response = await fetch('https://overshoot-barley-felt-tip.ngrok-free.dev/webhook/customer-feedback-submitted', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Server returned status: ' + response.status);
+                }
+
+                // Show success view
+                feedbackForm.classList.add('hidden');
+                thankYouState.classList.remove('hidden');
+            } catch (err) {
+                console.error('Submission error:', err);
+                alertBox.classList.remove('hidden', 'bg-green-50', 'text-green-700');
+                alertBox.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
+                alertBox.textContent = 'There was an error submitting your feedback. Please try again.';
+                
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Feedback';
+                btnSpinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
