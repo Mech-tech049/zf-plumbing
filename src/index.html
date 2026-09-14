@@ -405,28 +405,19 @@
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Email Address *</label>
-                            <input type="email" id="customer_email" placeholder="john@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                            <input type="email" id="customer_email" name="customer_email" placeholder="john@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Location *</label>
-                            <input type="text" id="project_location" placeholder="Street Address, City or Zip" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
+                            <input type="text" id="project_location" name="service_location" placeholder="Street Address, City or Zip" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm" required>
                         </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Priority *</label>
-                        <select id="urgency_level" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
-                            <option value="EMERGENCY">🚨 Emergency (Active Leak / Flooding / No Heat) — Priority Dispatch</option>
-                            <option value="EMERGENCY">Urgent (Same-Day Service Preferred)</option>
-                            <option value="STANDARD">Standard (Next Available / Routine)</option>
-                            <option value="STANDARD">Estimate Request (Inspection / Remodel)</option>
-                        </select>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Primary Plumbing Issue *</label>
-                            <select id="service_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Type *</label>
+                            <select id="service_type" name="service_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
+                                <option value="" disabled selected>Select Service Type</option>
                                 <optgroup label="Emergency &amp; Leak Repairs">
                                     <option value="Burst Pipe / Active Water Leak">Burst Pipe / Active Water Leak</option>
                                     <option value="Slab Leak / Hidden Pipe Leak">Slab Leak / Hidden Pipe Leak</option>
@@ -443,7 +434,7 @@
                                     <option value="Toilet Repair / Constant Running">Toilet Repair / Constant Running</option>
                                     <option value="Faucet, Shower, or Fixture Replacement">Faucet, Shower, or Fixture Replacement</option>
                                 </optgroup>
-                                <optgroup label="Commercial &amp; Line Replacements">
+                                <optgroup label="Commercial &amp; General">
                                     <option value="Commercial Grease Trap / Plumbing">Commercial Grease Trap / Plumbing</option>
                                     <option value="Whole-Home Repiping Inspection">Whole-Home Repiping Inspection</option>
                                     <option value="General Plumbing Inspection">General Plumbing Inspection</option>
@@ -451,18 +442,12 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Property Classification</label>
-                            <select id="property_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium">
-                                <option value="Single-Family Residential">Single-Family Residential</option>
-                                <option value="Multi-Family / Apartment Unit">Multi-Family / Apartment Unit</option>
-                                <option value="Commercial Facility / Restaurant">Commercial Facility / Restaurant</option>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Priority / Urgency *</label>
+                            <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm font-medium" required>
+                                <option value="emergency">🚨 Emergency (Immediate Dispatch Required)</option>
+                                <option value="standard" selected>Standard (Next Available / Scheduled Service)</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Problem Details</label>
-                        <textarea id="project_details" rows="3" placeholder="Describe the plumbing problem (e.g., pipe leaking under kitchen sink, water heater not producing hot water)..." class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm"></textarea>
                     </div>
 
                     <button type="submit" id="submit-btn" class="w-full bg-arco-dark hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition text-base shadow-md hover:shadow-lg">
@@ -547,19 +532,12 @@
             formStatus.classList.add('text-gray-600');
             formStatus.innerText = 'Sending priority dispatch ticket...';
 
-            const rawUrgency = document.getElementById('urgency_level').value;
-            const urgency = (rawUrgency === 'EMERGENCY' || rawUrgency.toLowerCase().includes('emergency') || rawUrgency.toLowerCase().includes('urgent')) ? 'EMERGENCY' : 'STANDARD';
-
-            const payload = {
-                customer_name: document.getElementById('customer_name').value.trim(),
-                customer_phone: document.getElementById('customer_phone').value.trim(),
-                customer_email: document.getElementById('customer_email').value.trim(),
-                service_location: document.getElementById('project_location').value.trim(),
-                urgency: urgency,
-                service_type: document.getElementById('service_type').value,
-                property_classification: document.getElementById('property_type').value,
-                details: document.getElementById('project_details').value.trim()
-            };
+            const name = document.getElementById('customer_name').value.trim();
+            const phone = document.getElementById('customer_phone').value.trim();
+            const email = document.getElementById('customer_email').value.trim();
+            const location = (document.getElementById('project_location') || document.getElementById('service_location')).value.trim();
+            const serviceTypeState = document.getElementById('service_type').value;
+            const urgencyState = document.getElementById('urgency').value;
 
             try {
                 // Live production webhook endpoint for n8n lead intake
@@ -571,7 +549,14 @@
                         'Content-Type': 'application/json',
                         'ngrok-skip-browser-warning': 'true'
                     },
-                    body: JSON.stringify(payload)
+                    body: JSON.stringify({
+                        customer_name: name,
+                        customer_phone: phone,
+                        customer_email: email,
+                        service_location: location,
+                        service_type: serviceTypeState,
+                        urgency: urgencyState
+                    })
                 });
 
                 if (response.ok) {
