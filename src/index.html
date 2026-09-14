@@ -439,6 +439,9 @@
                                     <option value="Whole-Home Repiping Inspection">Whole-Home Repiping Inspection</option>
                                     <option value="General Plumbing Inspection">General Plumbing Inspection</option>
                                 </optgroup>
+                                <optgroup label="Other / Custom">
+                                    <option value="Others">Others (Custom Details)</option>
+                                </optgroup>
                             </select>
                         </div>
                         <div>
@@ -448,6 +451,14 @@
                                 <option value="standard" selected>Standard (Next Available / Scheduled Service)</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="customer_details" class="block text-xs font-bold text-gray-700 uppercase tracking-wider">Details</label>
+                            <span class="text-xs text-gray-400 font-medium">(Optional)</span>
+                        </div>
+                        <textarea id="customer_details" name="customer_details" rows="3" placeholder="Provide any additional details or describe your custom plumbing issue..." class="w-full px-4 py-3 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-arco-gold bg-gray-50 text-sm resize-y transition"></textarea>
                     </div>
 
                     <button type="submit" id="submit-btn" class="w-full bg-arco-dark hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition text-base shadow-md hover:shadow-lg">
@@ -523,6 +534,18 @@
         const submitBtn = document.getElementById('submit-btn');
         const formStatus = document.getElementById('form-status');
 
+        // Focus details if 'Others' is selected in service type
+        const serviceTypeSelect = document.getElementById('service_type');
+        const detailsInput = document.getElementById('customer_details');
+        if (serviceTypeSelect && detailsInput) {
+            serviceTypeSelect.addEventListener('change', () => {
+                if (serviceTypeSelect.value === 'Others') {
+                    detailsInput.focus();
+                    detailsInput.placeholder = 'Please describe your custom plumbing requirements or issue...';
+                }
+            });
+        }
+
         leadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -538,10 +561,31 @@
             const location = (document.getElementById('project_location') || document.getElementById('service_location')).value.trim();
             const serviceTypeState = document.getElementById('service_type').value;
             const urgencyState = document.getElementById('urgency').value;
+            const details = document.getElementById('customer_details') ? document.getElementById('customer_details').value.trim() : '';
 
             try {
                 // Live production webhook endpoint for n8n lead intake
                 const N8N_WEBHOOK_URL = 'https://overshoot-barley-felt-tip.ngrok-free.dev/webhook/lead-intake';
+
+                const payload = {
+                    // Standard keys
+                    customer_name: name,
+                    customer_phone: phone,
+                    customer_email: email,
+                    service_location: location,
+                    service_type: serviceTypeState,
+                    urgency: urgencyState,
+                    details: details,
+                    // Direct alias keys so every integration receives name, email, number, address, services needed & details
+                    name: name,
+                    email: email,
+                    number: phone,
+                    phone: phone,
+                    address: location,
+                    services_needed: serviceTypeState,
+                    custom_details: details,
+                    timestamp: new Date().toISOString()
+                };
 
                 const response = await fetch(N8N_WEBHOOK_URL, {
                     method: 'POST',
@@ -549,14 +593,7 @@
                         'Content-Type': 'application/json',
                         'ngrok-skip-browser-warning': 'true'
                     },
-                    body: JSON.stringify({
-                        customer_name: name,
-                        customer_phone: phone,
-                        customer_email: email,
-                        service_location: location,
-                        service_type: serviceTypeState,
-                        urgency: urgencyState
-                    })
+                    body: JSON.stringify(payload)
                 });
 
                 if (response.ok) {
